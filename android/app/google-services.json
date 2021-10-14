@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "216842561782",
+    "firebase_url": "https://jiwdopani-e766d-default-rtdb.firebaseio.com",
+    "project_id": "jiwdopani-e766d",
+    "storage_bucket": "jiwdopani-e766d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216842561782:android:6335523e41b3c0fbc264d7",
+        "android_client_info": {
+          "package_name": "com.jiwdopani.jiwdopani"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216842561782-23qrrt79jtbu6shrtji7cu3dmhoqdmc0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jiwdopani.jiwdopani",
+            "certificate_hash": "5829623d96bd3a0f098dca12bc228ce0f629091a"
+          }
+        },
+        {
+          "client_id": "216842561782-sf09hvvg5pnbiudmdnguvc6h77iun57h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-OMlFFLqcJ6Fd76FFmKjpf78mys9PufQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216842561782-sf09hvvg5pnbiudmdnguvc6h77iun57h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

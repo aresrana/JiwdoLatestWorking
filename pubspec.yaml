@@ -1,0 +1,207 @@
+name: jiwdopani
+description: A new Flutter application.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=1.19.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc:
+  path:
+  rxdart:
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons:
+  firebase_database:
+  firebase_core:
+  path_provider:
+  firebase_auth:
+  http:
+  firebase_storage:
+  sqflite:
+  video_player:
+  pdf_viewer_plugin:
+  flutter_full_pdf_viewer:
+  flutter_pdfview:
+  file_picker:
+  js:
+  #cloud_firestore:
+  firebase_storage_web:
+  epub_view:
+  fab_circular_menu:
+  url_launcher:
+  advance_pdf_viewer:
+  permission_handler:
+  flutter_cached_pdfview:
+  pdf_flutter:
+  google_fonts:
+  google_sign_in:
+  gradient_scaffold:
+  json_annotation:
+  build_runner:
+  image_picker:
+  firebase_messaging:
+  flutter_firebase_notifications:
+  logger:
+  date_field:
+  intl:
+  dio:
+  firebase:
+  wiredash:
+  font_awesome_flutter:
+  youtube_player_flutter:
+  provider:
+  pinput:
+  country_code_picker:
+  just_audio:
+
+
+dev_dependencies:
+  flutter_native_splash:
+  json_serializable:
+  flutter_test:
+    sdk: flutter
+dependency_overrides:
+  analyzer:
+  cloud_firestore:
+
+# For information on the geic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+  assets:
+    - android\app\src\main\res\assets\image.xml
+    - images/calendar.png
+    - images/precious.png
+    - images/water.JPG
+    - assets/jp.jpg
+    - assets/2.png
+    - assets/are.png
+    - assets/logo.tif
+    - assets/logoJPani.png
+    - assets/aresre.png
+    - assets/aresre4.png
+    - assets/U.png
+    - assets/aresrp.png
+    - assets/aresred.png
+    - assets/prologo.png
+    - assets/logor.png
+    - assets/logorr.png
+    - assets/lolo.png
+    - assets/areslast.png
+    - assets/lasarres.png
+    - assets/finalares.png
+    - assets/lasthaita.jpg
+    - assets/letter.jpg
+    - assets/binoy.jpg
+    - assets/seth.jpg
+    - assets/jesher.jpg
+    - assets/prakash.jpg
+    - assets/meelan.jpg
+    - assets/kb.jpg
+    - assets/dewan.jpg
+    - assets/bimal.jpg
+    - assets/KB1.jpg
+    - assets/mina.jpg
+    - assets/subhadra.jpg
+    - assets/kb2.jpg
+    - assets/kb3.png
+    - assets/seth.png
+    - assets/paul.jpg
+    - assets/bhim.png
+    - assets/DT.jpg
+    - assets/KT.jpg
+    - assets/SL.jpg
+    - assets/BT.jpg
+    - assets/RN.jpg
+    - assets/SN.jpg
+    - assets/BaT.jpg
+    - assets/DK.jpg
+    - assets/IKB.jpg
+    - assets/SB.jpg
+    - assets/AT.jpg
+    - assets/DA.jpg
+    - assets/BST.jpg
+    - assets/KTh.jpg
+    - assets/EN.jpg
+    -  assets/JPaudio.mp3
+    - assets/JiwdoLogo.png
+    - assets/waterfall.mp3
+    - assets/jp.mp3
+    - assets/jiudoBG.jpg
+    - assets/thuli.jpg
+    - assets/shubh.jpg
+    - assets/DN.jpg
+    - assets/otp.png
+
+
+
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+
+
+
+  #   - images/a_dot_ham.jpeg
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for/ the font. For
+  # example:
+
+  fonts:
+    - family: pure
+      fonts:
+        - asset: fonts/puree____2.ttf
+    - family: Fidd
+      fonts:
+       - asset: fonts/Fiddums Family.ttf
+    - family: blk
+      fonts:
+        - asset: fonts/BLKCHCRY.ttf
+    - family: back
+      fonts:
+        - asset: fonts/Back to Black Demo.ttf
+
+    - family: beyond
+      fonts:
+        - asset: fonts/Beyond Wonderland.ttf
+    - family: call
+      fonts:
+        - asset: fonts/Calling Angels Personal Use.ttf
+    - family: pure
+      fonts:
+      - asset: fonts/puree____2.ttf
+
+
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

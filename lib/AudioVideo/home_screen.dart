@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   //UCtfK5Khr3psKzUP9HuYYgrw
   _initChannel() async {
     Channel channel = await APIService.instance
-        .fetchChannel(channelId: 'UCuwLgMUlvNMbDS2yb6yQXug');
+        .fetchChannel(channelId: 'UCSoAOxysYipdxR6gwEgBobA');
     setState(() {
       _channel = channel;
     });
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: <Widget>[
           CircleAvatar(
             backgroundColor: Colors.white,
-            radius: 35.0,
+            radius: 30.0,
             backgroundImage: NetworkImage(_channel.profilePictureUrl),
           ),
           SizedBox(width: 12.0),
@@ -66,15 +66,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
-                Text(
-                  '${_channel.subscriberCount} subscribers',
-                  style: TextStyle(
-                    color: Colors.grey[600],
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w600,
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                ),
+                // Text(
+                //   '${_channel.subscriberCount} subscribers',
+                //   style: TextStyle(
+                //     color: Colors.grey[600],
+                //     fontSize: 16.0,
+                //     fontWeight: FontWeight.w600,
+                //   ),
+                //   overflow: TextOverflow.ellipsis,
+                // ),
               ],
             ),
           )

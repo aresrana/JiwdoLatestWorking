@@ -2,6 +2,7 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:jiwdopani/UserLogIn/MenuUse.dart';
 import 'OTPController.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -24,14 +25,15 @@ class _LoginScreenState extends State<LoginScreen> {
       SizedBox(height: 100),
       Padding(
         padding: const EdgeInsets.only(left: 28.0, right: 28.0),
-        child: Image.asset("assets/prologo.png"),
+        child: Image.asset("assets/prologolast.jpg",
+        fit: BoxFit.scaleDown),
       ),
       Container(
         margin: EdgeInsets.only(top: 10),
         child: Center(
             child: Text(
           "Phone (OTP) Authentication",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,color:Color(0xff9C050D)),
         )),
       ),
       SizedBox(
@@ -69,6 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
           margin: EdgeInsets.all(15),
           width: double.infinity,
           child: ElevatedButton(
+              style:ElevatedButton.styleFrom(primary: Color(0xff9C050D)),
               onPressed: () async {
                 if (_controller.text.isEmpty) {
                   return;
@@ -84,38 +87,71 @@ class _LoginScreenState extends State<LoginScreen> {
                     .once();
 
                 if (data.value==null) {
-                  await showDialog(
-                      context: context,
-                      builder: (_) => AlertDialog(
-                              title: Text(
-                                'Sorry!',
-                                style: TextStyle(color: Colors.red),
-                              ),
-                              content: Text(
-                                "You are not subscribed to us. Please do contact your promoter  ",
-                                style: TextStyle(color: Colors.indigo[900]),
-                              ),
-                              actions: [
-                                // ignore: deprecated_member_use
-                                FlatButton(
-                                    child: Text('Try Again'),
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    }),
-                                // ignore: deprecated_member_use
-                              ]));
-                  return;
+                  FocusScope.of(context).unfocus();
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text('Please contact your promoter for subscription'),
+                      duration: Duration(seconds: 3)));
+                     _controller.clear();
+
+                        return;
+
+
+
+                  // await showDialog(
+                  //     context: context,
+                  //     builder: (_) => AlertDialog(
+                  //             title: Text(
+                  //               'Sorry!',
+                  //               style: TextStyle(color: Colors.red),
+                  //             ),
+                  //             content: Text(
+                  //               "You are not subscribed to us. Please do contact your promoter  ",
+                  //               style: TextStyle(color: Colors.indigo[900]),
+                  //             ),
+                  //             actions: [
+                  //               // ignore: deprecated_member_use
+                  //               FlatButton(
+                  //                   child: Text('Try Again'),
+                  //                   onPressed: () {
+                  //                     Navigator.of(context).pop();
+                  //                   }),
+                  //               // ignore: deprecated_member_use
+                  //             ]));
+                  // return;
                 }
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (c) => OTPController(
+                {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (c) => OTPController(
                         phoneNumber: _controller.text,
                         codeDigit: dialCodeDigits)));
-              },
+              }},
               child: Text(
                 'Next',
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              )))
+              ))),
+
+                  ElevatedButton(
+                      style:ElevatedButton.styleFrom(primary: Color(0xff9C050D)),
+
+                      onPressed:(
+
+                          ){
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => UserMenu()
+                            )
+                        );
+                      },
+                      child: Text(
+                        'Back',
+                        style:
+                        TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                      )
+
+                  ),
     ])));
   }
 }

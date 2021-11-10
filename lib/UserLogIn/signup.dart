@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jiwdopani/Promoters/promo_register.dart';
-
 import '../services/error_handler.dart';
 import '../services/authservice.dart';
 
@@ -13,7 +11,7 @@ class SignupPage extends StatefulWidget {
 class _SignupPageState extends State<SignupPage> {
   final formKey = new GlobalKey<FormState>();
 
-  String email, password,fname,lname,cname,cadd;
+  String email, password;
 
   Color greenColor = Colors.indigo[900];
 
@@ -37,43 +35,7 @@ class _SignupPageState extends State<SignupPage> {
     else
       return null;
   }
-  //To Validate firstname
-  String validateFname(String value) {
-    Pattern pattern = r'([a-zA-Z])';
-    RegExp regex = new RegExp(pattern);
-    if (!regex.hasMatch(value))
-      return 'Enter Valid First Name';
-    else
-      return null;
-  }
 
-  //To Validate LastName
-  String validateLname(String value) {
-    Pattern pattern = r'([a-zA-Z])';
-    RegExp regex = new RegExp(pattern);
-    if (!regex.hasMatch(value))
-      return 'Enter Valid Last Name';
-    else
-      return null;
-  }
-  //To Validate Church Name
-  String validateCname(String value) {
-    Pattern pattern = r'([a-zA-Z])';
-    RegExp regex = new RegExp(pattern);
-    if (!regex.hasMatch(value))
-      return 'Enter Valid Church Name';
-    else
-      return null;
-  }
-  //To Validate church address
-  String validateCadd(String value) {
-    Pattern pattern = r'([a-zA-Z])';
-    RegExp regex = new RegExp(pattern);
-    if (!regex.hasMatch(value))
-      return 'Enter Valid Church Address';
-    else
-      return null;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -90,50 +52,21 @@ class _SignupPageState extends State<SignupPage> {
         padding: const EdgeInsets.only(left: 25.0, right: 25.0),
         child: ListView(children: [
           SizedBox(height: 70.0),
-          Container(
+          Center(
+          child: Container(
               height: 105.0,
               width: 200.0,
               child: Stack(
                 children: [
-                  Text('Signup',
-                      style: TextStyle(fontFamily: 'Trueno', fontSize: 60.0)),
+                  Text('Registration',
+                      style: TextStyle(fontFamily: 'Trueno', fontSize: 35.0,
+                      color:Color(0xff9C050D))),
                   //Dot placement
 
                 ],
-              )),
+              ))),
           SizedBox(height: 25.0),
-          TextFormField(
-              decoration: InputDecoration(
-                  labelText: 'First Name',
-                  labelStyle: TextStyle(
-                      fontFamily: 'Trueno',
-                      fontSize: 12.0,
-                      color: Colors.grey.withOpacity(0.5)),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: greenColor),
-                  )),
-              onChanged: (value) {
-                this.fname = value;
-              },
-              validator: (value) =>
-              value.isEmpty ? 'First Name is required' : validateFname(value)),
-          TextFormField(
-              decoration: InputDecoration(
-                  labelText: 'Last Name',
-                  labelStyle: TextStyle(
-                      fontFamily: 'Trueno',
-                      fontSize: 12.0,
-                      color: Colors.grey.withOpacity(0.5)),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: greenColor),
-                  )),
-              onChanged: (value) {
-                this.lname = value;
-              },
-              validator: (value) =>
-              value.isEmpty ? 'Last Name is required' : validateLname(value)),
-
-          TextFormField(
+                   TextFormField(
               decoration: InputDecoration(
                   labelText: 'EMAIL',
                   labelStyle: TextStyle(
@@ -164,41 +97,11 @@ class _SignupPageState extends State<SignupPage> {
               },
               validator: (value) =>
               value.isEmpty ? 'Password is required' : null),
-          TextFormField(
-              decoration: InputDecoration(
-                  labelText: 'Church Name',
-                  labelStyle: TextStyle(
-                      fontFamily: 'Trueno',
-                      fontSize: 12.0,
-                      color: Colors.grey.withOpacity(0.5)),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: greenColor),
-                  )),
-              onChanged: (value) {
-                this.fname = value;
-              },
-              validator: (value) =>
-              value.isEmpty ? 'First Name is required' : validateCname(value)),
-          TextFormField(
-              decoration: InputDecoration(
-                  labelText: 'Address of Church',
-                  labelStyle: TextStyle(
-                      fontFamily: 'Trueno',
-                      fontSize: 12.0,
-                      color: Colors.grey.withOpacity(0.5)),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: greenColor),
-                  )),
-              onChanged: (value) {
-                this.cadd = value;
-              },
-              validator: (value) =>
-              value.isEmpty ? 'Address of Church is required' : validateCadd(value)),
-          SizedBox(height: 50.0),
+                             SizedBox(height: 50.0),
           GestureDetector(
             onTap: () {
               if (checkFields())
-                AuthService().signUp(email, password,fname,lname,cname,cadd).then((userCreds) {
+                AuthService().signUp(email, password).then((userCreds) {
                   Navigator.of(context).pop();
                                  }).catchError((e) {
                   ErrorHandler().errorDialog(context, e);
@@ -208,8 +111,8 @@ class _SignupPageState extends State<SignupPage> {
                 height: 40.0,
                 child: Material(
                     borderRadius: BorderRadius.circular(25.0),
-                    shadowColor: Colors.greenAccent,
-                    color: greenColor,
+                    shadowColor: Colors.black,
+                    color: Color(0xff9C050D),
                     elevation: 7.0,
                     child: Center(
                         child: Text('SIGN UP',
@@ -224,7 +127,7 @@ class _SignupPageState extends State<SignupPage> {
                 },
                 child: Text('Go back',
                     style: TextStyle(
-                        color: greenColor,
+                        color: Color(0xff9C050D),
                         fontFamily: 'Trueno',
                         decoration: TextDecoration.underline)))
           ])

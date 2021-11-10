@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     createProfileImage(ProContact promoters) =>
-        Hero(
+            Hero(
             tag: promoters.procontactName,
             child: Column(children: <Widget>[
               Material(
@@ -53,7 +53,7 @@ class Home extends StatelessWidget {
                           padding: const EdgeInsets.all(1.0),
                           child: Text(
                               promoters.proEmail,
-                              style: TextStyle(color: Colors.black, fontSize: 12.0,fontWeight:FontWeight.bold)),
+                              style: TextStyle(color: Colors.black, fontSize: 11.0,fontWeight:FontWeight.bold)),
                         ),
                       ),
                       Container(
@@ -178,8 +178,11 @@ class Home extends StatelessWidget {
 
     ProfileList(Contact contact) =>
         Hero(
+
+
           tag: contact.contactName,
-          child: Container(
+                     child: Container(
+
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Material(
@@ -231,6 +234,8 @@ class Home extends StatelessWidget {
       body: DefaultTabController(
         length: 3,
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
+
           appBar: AppBar(
             leading: IconButton(icon: Icon(FontAwesomeIcons.arrowLeft,
               color: Colors.white,
@@ -257,16 +262,22 @@ class Home extends StatelessWidget {
           body: TabBarView(
             children: [
               Container(
+
+
                 child: ListView(
+
                   scrollDirection: Axis.vertical,
                   children: contacts.map((contact) => ProfileList(contact))
                       .toList(),
 
                 ),
               ),
-              Container(
+
+            Container(
+
+
                 // child: ListView(
-                // scrollDirection: Axis.vertical,
+               // scrollDirection: Axis.vertical,
                 padding: const EdgeInsets.only(top: 16.0, left: 8.0),
                 // children: promoters.map((promoter) => PromoterProfileList(promoter))
                 //.toList(),

@@ -13,12 +13,12 @@ if (flutterRoot == null) {
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
 if (flutterVersionCode == null) {
-    flutterVersionCode = '1'
+    flutterVersionCode = '3'
 }
 
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
-    flutterVersionName = '1.0'
+    flutterVersionName = '1.2-test'
 }
 
 apply plugin: 'com.android.application'
@@ -63,6 +63,10 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.release
+            crunchPngs false //or true
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
         }
     }
 //    buildTypes {

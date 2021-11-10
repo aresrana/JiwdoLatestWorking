@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 1.0.0+7
 
 environment:
   sdk: ">=1.19.0 <3.0.0"
@@ -73,10 +73,17 @@ dependencies:
   pinput:
   country_code_picker:
   just_audio:
+#  flutter_native_splash:
+#
+#
+#flutter_native_splash:
+#    color: "#55adee"
+#    image: images/launch_image.png
+#    android: true
+#    ios: true
 
 
 dev_dependencies:
-  flutter_native_splash:
   json_serializable:
   flutter_test:
     sdk: flutter
@@ -144,15 +151,80 @@ flutter:
     - assets/BST.jpg
     - assets/KTh.jpg
     - assets/EN.jpg
-    -  assets/JPaudio.mp3
+    -  assets/jingle.mp3
     - assets/JiwdoLogo.png
     - assets/waterfall.mp3
-    - assets/jp.mp3
     - assets/jiudoBG.jpg
     - assets/thuli.jpg
     - assets/shubh.jpg
     - assets/DN.jpg
     - assets/otp.png
+    - assets/yolast.jpg
+    - assets/prologolast.jpg
+    - assets/cbt.jpg
+    - assets/ent.jpg
+    - assets/udrai.jpg
+    - assets/surai.jpg
+    - assets/dilrai.jpg
+    - assets/Prarana.jpg
+    - assets/dbsunwar.jpg
+    - assets/kumling.jpg
+    - assets/premTa.jpg
+    - assets/rajch.jpg
+    - assets/premda.jpg
+    - assets/CBi.jpg
+    - assets/bar.jpg
+    - assets/aresrana.jpg
+    - assets/askr.jpg
+    - assets/bpc.jpg
+    - assets/bsta.jpg
+    - assets/cmb.jpg
+    - assets/csr.jpg
+    - assets/css.jpg
+    - assets/dag.jpg
+    - assets/dil.jpg
+    - assets/hbt.jpg
+    - assets/jci.jpg
+    - assets/mbr.jpg
+    - assets/mjr.jpg
+    - assets/nl.jpg
+    - assets/ppc.jpg
+    - assets/prt.jpg
+    - assets/skb.jpg
+    - assets/srs.jpg
+    - assets/svr.jpg
+    - assets/tbw.jpg
+    - assets/tlb.jpg
+    - assets/tsl.jpg
+    - assets/vs.jpg
+    - assets/nit.jpg
+    - assets/mik.jpg
+    - assets/nar.jpg
+    - assets/ank.jpg
+    - assets/dipb.jpg
+    - assets/aks.jpeg
+    - assets/wal.jpeg
+    - assets/tol.jpeg
+    - assets/kbct.jpeg
+    - assets/bsu.jpg
+    - assets/kbb.jpeg
+    - assets/knp.jpeg
+    - assets/akl.jpeg
+    - assets/sus.jpeg
+    - assets/sang.jpeg
+    - assets/nehg.jpeg
+    - assets/prac.jpeg
+    - assets/kact.jpeg
+    - assets/mkp.jpeg
+    - assets/khp.jpeg
+    - assets/khpu.jpeg
+    - assets/saily.jpeg
+    - assets/yup.jpeg
+    - assets/raos.jpeg
+    - assets/nib.jpeg
+    - assets/sat.jpeg
+    - assets/lastProLogo.png
+
 
 
 

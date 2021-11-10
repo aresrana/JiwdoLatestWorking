@@ -1,6 +1,6 @@
 import 'package:jiwdopani/AudioVideo/home_screen.dart';
 import 'package:jiwdopani/Contact/contactMain.dart';
-
+import 'package:jiwdopani/promoterAccess/promoSplash.dart';
 import 'package:jiwdopani/UserMenuOption/read_option.dart';
 import 'package:jiwdopani/UserMenuOption/user_submit.dart';
 import 'package:jiwdopani/Feedback/userFeedback.dart';
@@ -8,8 +8,6 @@ import 'package:jiwdopani/selectVerse/readPromise.dart';
 import 'package:jiwdopani/services/authservice.dart';
 import 'fab_circulat.dart';
 import 'package:flutter/material.dart';
-import 'login_page.dart';
-
 
 import 'login_page.dart';
 
@@ -97,12 +95,28 @@ class _UserMenuState extends State<UserMenu> {
                     },
                     iconSize: 48.0,
                     color: Colors.indigo),
+                IconButton(
+                    icon: Icon(Icons.add_circle),
+                    onPressed: () async {
+
+                      Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(
+                              builder: (context) => PromoSplash()),
+                              (Route<dynamic> route) => false);
+
+                      },
+                    iconSize: 48.0,
+                    color: Colors.indigo),
 
 
                 IconButton(
                     icon: Icon(Icons.exit_to_app_rounded),
-                    onPressed: () async {
-                      _auth.signOut();
+                    onPressed: () async  {
+
+
+
+
+                     _auth.signOut();
                       // Navigator.of(context).push(
                       //     MaterialPageRoute(builder: (context) => LoginPage()));
                     },

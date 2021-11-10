@@ -3,6 +3,7 @@ import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 import 'package:jiwdopani/Subscribers/add_subscribers.dart';
 import 'package:jiwdopani/Subscribers/edit_subscribers.dart';
+import 'package:jiwdopani/UserLogIn/MenuUse.dart';
 
 
 class Subscribers extends StatefulWidget {
@@ -178,8 +179,15 @@ class _SubscribersState extends State<Subscribers> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading:false,
         backgroundColor: Colors.indigo[900],
         title: Text('Subscribers'),
+          leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+        onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => UserMenu()))
+
+      ),
       ),
       body: Container(
         height: double.infinity,

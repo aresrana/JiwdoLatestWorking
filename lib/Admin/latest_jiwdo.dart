@@ -76,7 +76,7 @@ class _latestJiwdoState extends State<latestJiwdo> {
     if (file == null) return;
 
     final fileName = basename(file.path);
-    final destination = 'lstest/$fileName';
+    final destination = 'latest/$fileName';
 
     task = FirebaseApi.uploadFile(destination, file);
     setState(() {});

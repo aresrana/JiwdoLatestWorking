@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "216842561782-qog27j76pej8uejo6ku5ke404b02qac6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jiwdopani.jiwdopani",
+            "certificate_hash": "54f6afae0e0f787d7ee214a9d4931540586b75e3"
+          }
+        },
+        {
           "client_id": "216842561782-sf09hvvg5pnbiudmdnguvc6h77iun57h.apps.googleusercontent.com",
           "client_type": 3
         }

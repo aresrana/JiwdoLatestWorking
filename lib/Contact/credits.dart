@@ -20,5 +20,6 @@ final List<Credits> credits=[
   Credits("assets/BaT.jpg", "Silvanus Sharma","Elim Prayer House","Dikchu,India","Administrative Church"),
   Credits("assets/DK.jpg", "Daniel Khatri","Berachah House of Worship","Reading,UK","Special Representative"),
   Credits("assets/DA.jpg", "Daniel Adhikari","Ebenezer House of Worship","Cincinnati,USA","Special Representative"),
-  Credits("assets/EN.jpg", "Enosh Namchyo","Berea House of Prayer","Krishnanagar,Nepal","Special Representative")
+  Credits("assets/EN.jpg", "Enosh Namchyo","Berea House of Prayer","Krishnanagar,Nepal","Special Representative"),
+  Credits("assets/premTa.jpg","Prem Tamang","El-shaddai Prayer House","Darjeeling,India","Special Representative")
 ];

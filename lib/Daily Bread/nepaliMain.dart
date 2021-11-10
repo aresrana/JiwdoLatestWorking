@@ -13,7 +13,7 @@ import 'breadMain.dart';
 NepaliMain() => MyApp();
 
 class MyApp extends StatelessWidget {
-  static final String title = "Today's Meditation";
+  static final String title = "आजको वचन मनन  ";
 
 
   @override
@@ -39,7 +39,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    futureFiles = preApi.listAll('EnglishBread/');
+    futureFiles = preApi.listAll('NepaliBread/');
   }
 
   @override
@@ -140,14 +140,14 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
      player.stop();
    }
    else
-     player.play();
+     player.pause();
 
  }
 
 
   @override
   playAudio(context,FirebaseFile file) {
-    player.setAsset('assets/JPaudio.mp3');
+    player.setAsset('assets/jingle.mp3');
     player.play();
      return readDaily(context, file);
     }
@@ -167,51 +167,55 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
 
       children: [
         SizedBox(
-          height:360,
+          height:440,
         ),
+        InkWell(
+
+          onTap: () {
+            player.stop();
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => FilePage(file: file)));
+          },
+          child: Card(
+
+            elevation:30,
+            shadowColor:Colors.blue,
+
+            child:Text(file.name.split('.').first,style:TextStyle
+              (
+                fontFamily: 'cookie',
+                fontSize: 40,
+                color:Colors.blue
+            ),),
+
+
+          ),
+
+
+        ),
+        Container(
+            child: Text("कृपया पढ्नको लागि माथि थिच्नुहोला ! ",
+              style: TextStyle
+                (
+                  fontSize:14
+              ),)
+
+        ),
+    const SizedBox(
+      height:10,
+    ),
     Container(
-                 child:Text("Presents Daily Meditation For",style:TextStyle
+                 child:Text("को लागि दैनिक वचन मनन प्रस्तुत गर्दछ ।",style:TextStyle
             (
             fontFamily: 'cookie',
-            fontSize: 40,
+            fontSize: 20,
             color:Colors.black
           ),),
         ),
        // SizedBox(
          // height:40,
        // ),
-         InkWell(
 
-         onTap: () {
-           player.stop();
-           Navigator.of(context).push(MaterialPageRoute(
-               builder: (context) => FilePage(file: file)));
-             },
-          child: Card(
-
-            elevation:30,
-          shadowColor:Colors.blue,
-
-          child:Text(file.name.split('.').first,style:TextStyle
-            (
-              fontFamily: 'cookie',
-              fontSize: 40,
-              color:Colors.blue
-          ),),
-
-
-        ),
-
-
-           ),
-        Container(
-          child: Text("Please Tap Above For Exposition",
-          style: TextStyle
-            (
-            fontSize:14
-          ),)
-
-         )
 
       ],
     )

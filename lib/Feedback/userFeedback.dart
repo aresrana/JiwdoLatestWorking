@@ -28,7 +28,9 @@ class _UserFeedbackState extends State<UserFeedback> {
         backgroundColor: Colors.indigo[900],
         title: Text('Submit Feedback'),
       ),
-      body: Container(
+      body: SingleChildScrollView
+        (
+      child: Container(
         margin: EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -153,7 +155,7 @@ class _UserFeedbackState extends State<UserFeedback> {
           ],
         ),
       ),
-    );
+    ));
   }
   void saveFeedback(){
 

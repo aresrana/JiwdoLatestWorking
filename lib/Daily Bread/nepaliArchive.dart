@@ -15,7 +15,7 @@ import 'englishMain.dart';
 NepaliArchive() => MyApp();
 
 class MyApp extends StatelessWidget {
-  static final String title = 'Daily Bread';
+  static final String title = 'नेपाली संग्रह';
 
   @override
   Widget build(context) => MaterialApp(
@@ -38,7 +38,7 @@ class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     super.initState();
-    futureFiles = preApi.listAll('EnglishBread/');
+    futureFiles = preApi.listAll('NepaliBread/');
   }
 
   @override

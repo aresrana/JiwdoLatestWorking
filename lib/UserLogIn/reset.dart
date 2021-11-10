@@ -12,7 +12,7 @@ class _ResetPasswordState extends State<ResetPassword> {
 
   String email='';
 
-  Color greenColor = Color(0xFF00AF19);
+  Color greenColor = Color(0xff9C050D);
 
   //To check fields during submit
   checkFields() {

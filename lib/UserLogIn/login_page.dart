@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jiwdopani/Promoters/ProMenu.dart';
-import 'package:jiwdopani/Promoters/PromotersMain.dart';
+import 'package:jiwdopani/selectVerse/selectVerse.dart';
 import '../Admin/adminPage.dart';
 import 'reset.dart';
 import '../services/authservice.dart';
@@ -62,31 +61,39 @@ class _LoginPageState extends State<LoginPage> {
               width: 200.0,
               child: Stack(
                 children: [
-                  Text('जिउँदो',
-                      style: TextStyle(fontSize: 90.0,color: Colors.indigo)),
-                  Positioned(
-                      top: 90.0,
-                      child: Text('पानी',
-                          style:
-                          TextStyle(fontSize: 90.0,color:Colors.indigo))),
+                  Center(
+                  child: Image.asset(
+                    'assets/prologolast.jpg',
+                    fit: BoxFit.scaleDown
+                  )),
+                  // Text('जिउँदो',
+                  //     style: TextStyle(fontSize: 90.0,color: Colors.redAccent,fontWeight:FontWeight.bold)),
+                  // Positioned(
+                  //     top: 90.0,
+                  //     child: Text('पानी',
+                  //         style:
+                  //         TextStyle(fontSize: 90.0,color:Colors.red,fontWeight:FontWeight.bold))),
                 ],
               )),
           SizedBox(height: 25.0),
           TextFormField(
               decoration: InputDecoration(
-                  labelText: 'EMAIL',
+                               labelText: 'EMAIL',
                   labelStyle: TextStyle(
                       fontFamily: 'Trueno',
                       fontSize: 12.0,
                       color: Colors.grey.withOpacity(0.5)),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color:Colors.indigo),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color:Color(0xff9C050D)),
                   )),
               onChanged: (value) {
                 this.email = value;
               },
               validator: (value) =>
               value.isEmpty ? 'Email is required' : validateEmail(value)),
+          const SizedBox(
+            height: 10,
+          ),
           TextFormField(
               decoration: InputDecoration(
                   labelText: 'PASSWORD',
@@ -94,8 +101,8 @@ class _LoginPageState extends State<LoginPage> {
                       fontFamily: 'Trueno',
                       fontSize: 12.0,
                       color: Colors.grey.withOpacity(0.5)),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.indigo),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xff9C050D)),
                   )),
               obscureText: true,
               onChanged: (value) {
@@ -115,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: InkWell(
                       child: Text('Forgot Password',
                           style: TextStyle(
-                              color: Colors.indigo,
+                              color: Color(0xff9C050D),
                               fontFamily: 'Trueno',
                               fontSize: 13.0,
                               decoration: TextDecoration.underline))))),
@@ -128,13 +135,13 @@ class _LoginPageState extends State<LoginPage> {
                 height: 55.0,
                 child: Material(
                     borderRadius: BorderRadius.circular(25.0),
-                    shadowColor: Colors.indigo,
-                    color: Colors.indigo,
+                    shadowColor: Colors.redAccent,
+                    color: Color(0xff9C050D),
                     elevation: 10.0,
                     child: Center(
                         child: Text('LOGIN',
                             style: TextStyle(
-                                color: Colors.white, fontFamily: 'Trueno'))))),
+                                color: Colors.white, fontFamily: 'Trueno',fontSize:13 ))))),
           ),
           SizedBox(height: 25.0),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -147,7 +154,7 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 child: Text('Register',
                     style: TextStyle(
-                        color: Colors.indigo,
+                        color: Color(0xff9C050D),
                         fontFamily: 'Trueno',
                         decoration: TextDecoration.underline)))
           ]),
@@ -157,36 +164,36 @@ class _LoginPageState extends State<LoginPage> {
             InkWell(
               onTap: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => AdminPage()));
+                    MaterialPageRoute(builder: (context) => AdminPage())); //Adminpage
               },
               child: Text('Admin',
                   style: TextStyle(
-                      color: Colors.indigo,
+                      color: Color(0xff9C050D),
                       fontFamily: 'Trueno',
                       fontSize:17,
                       decoration: TextDecoration.underline)),
             ),
-            Icon(Icons.account_circle,color:Colors.indigo,)
+            Icon(Icons.account_circle,color:Color(0xff9C050D))
 
           ]),
-          SizedBox(height: 6.0),
-          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            SizedBox(width: 20.0),
-            InkWell(
-              onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => PromotersLogin()));
-              },
-              child: Text('Promoters',
-                  style: TextStyle(
-                      color: Colors.indigo,
-                      fontFamily: 'Trueno',
-                      fontSize:17,
-                      decoration: TextDecoration.underline)),
-            ),
-            Icon(Icons.account_circle,color:Colors.indigo,)
-
-          ]),
+          // SizedBox(height: 6.0),
+          // Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          //   SizedBox(width: 20.0),
+          //   InkWell(
+          //     onTap: () {
+          //       Navigator.of(context).push(
+          //           MaterialPageRoute(builder: (context) => PromotersLogin()));
+          //     },
+          //     child: Text('Promoters',
+          //         style: TextStyle(
+          //             color: Colors.indigo,
+          //             fontFamily: 'Trueno',
+          //             fontSize:17,
+          //             decoration: TextDecoration.underline)),
+          //   ),
+          //   Icon(Icons.account_circle,color:Colors.indigo,)
+          //
+          // ]),
         ]));
   }
 }

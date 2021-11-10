@@ -60,7 +60,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                     leading: IconButton(
                         icon: Icon(Icons.arrow_back),
                         onPressed: () async {
-                          player.pause();
+                          player.stop();
                           Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -143,14 +143,14 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
       player.stop();
     }
     else
-      player.play();
+      player.pause();
 
   }
 
 
   @override
   playAudio(context,FirebaseFile file) {
-    player.setAsset('assets/jp.mp3');
+    player.setAsset('assets/jingle.mp3');
 
     player.play();
     return readDaily(context, file);
@@ -160,26 +160,29 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
 
   Widget readDaily(context, FirebaseFile file) => Container(
 
-    //color: Colors.blue,,
-      decoration: BoxDecoration(
+
+        decoration: BoxDecoration(
           image: DecorationImage(
             image:AssetImage("assets/JiwdoLogo.png"),
             fit:BoxFit.cover,
-            alignment: Alignment.topCenter)),
+            alignment: Alignment.topCenter),
 
-       child: Column(
-               children: [
-          SizedBox(
-           height:450,
           ),
-              Text("Presents Daily Meditation For",style:TextStyle
+
+                child: Column(
+
+                  children: [
+                    SizedBox(
+                      height: 440,
+                    ),
+                               Text("Presents Daily Meditation For",style:TextStyle
               (
                 fontFamily: 'cookie',
                 fontSize: 25,
                 color:Colors.black
             ),),
                      SizedBox(
-          height:40,
+          height:20,
            ),
           InkWell(
 

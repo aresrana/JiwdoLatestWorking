@@ -44,7 +44,7 @@ class AuthService {
   }
 
   //Signup a new user
-  signUp(String email, String password,String fname,String lname,String cadd,String cname) {
+  signUp(String email, String password) {
     return FirebaseAuth.instance
 
 

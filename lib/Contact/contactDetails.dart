@@ -126,6 +126,7 @@ class ContactDetails extends StatelessWidget {
         primaryColor: Colors.indigo[900],
       ),
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           leading: IconButton(icon: Icon(FontAwesomeIcons.arrowLeft,
             color: Colors.white,

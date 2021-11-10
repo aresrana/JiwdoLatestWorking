@@ -25,10 +25,15 @@ class VerifyPin extends State<AdminPage> {
                 backgroundColor: Colors.indigo[900],
                 leading: IconButton(
                     icon: Icon(Icons.arrow_back),
-                    onPressed: () => Navigator.push(context,
-                            MaterialPageRoute(builder: (BuildContext context) {
-                          return LoginPage();
-                        })))),
+                    onPressed: () {
+                      Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(
+                              builder: (context) => LoginPage()),
+                              (Route<dynamic> route) => false);
+                    }
+                    )
+
+            ),
             body: Center(
                 child: Padding(
                     padding: const EdgeInsets.all(110.0),

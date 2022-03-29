@@ -1,13 +1,9 @@
-import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
-import 'package:firebase_core/firebase_core.dart';
+
 import 'package:jiwdopani/Precious/firebase_file.dart';
-import 'package:jiwdopani/UserMenuOption/read_option.dart';
 import 'package:jiwdopani/Precious/file_page.dart';
 import 'package:jiwdopani/Precious/preApi.dart';
-import 'package:jiwdopani/Precious/firebase_file.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'menuAdmin.dart';
 
 

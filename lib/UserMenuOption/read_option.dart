@@ -166,7 +166,7 @@ class _ReadOptionState extends State<ReadOption> {
                                             style: TextStyle(
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 17.0),
+                                                fontSize: 15.0),
 
                                           ),
                                         ],

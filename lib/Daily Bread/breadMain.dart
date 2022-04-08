@@ -89,7 +89,7 @@ class _BreadMainState extends State<BreadMain> {
                                             ),
                                           ),
                                           SizedBox(
-                                            height: 27.0,
+                                            height: 24.0,
                                           ),
                                         ],
                                       ),
@@ -208,7 +208,7 @@ class _BreadMainState extends State<BreadMain> {
                                             style: TextStyle(
                                                 color: Colors.black,
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 14.0),
+                                                fontSize: 13.0),
                                           ),
 
                                         ],

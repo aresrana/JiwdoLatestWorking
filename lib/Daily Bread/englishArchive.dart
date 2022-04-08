@@ -15,7 +15,7 @@ import 'englishMain.dart';
 EnglishArchive() => MyApp();
 
 class MyApp extends StatelessWidget {
-  static final String title = "English Arhchive";
+  static final String title = "English Archive";
 
   @override
   Widget build(context) => MaterialApp(

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>216842561782-ggvhglv5lad78eupjf0o3enun8kftbqq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.216842561782-ggvhglv5lad78eupjf0o3enun8kftbqq</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>216842561782-1uje1sogfpmfk3pht3atcnpmi0vna1qs.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAlcGAzUi2DVjnBpFT5Rd36aQ2xuR8wp8o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>216842561782</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jiwdopani.jiwdopani</string>
+	<key>PROJECT_ID</key>
+	<string>jiwdopani-e766d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>jiwdopani-e766d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:216842561782:ios:01fd58b5e055253dc264d7</string>
+	<key>DATABASE_URL</key>
+	<string>https://jiwdopani-e766d-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

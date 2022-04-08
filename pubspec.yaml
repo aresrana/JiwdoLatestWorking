@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+7
+version: 2.0.0+7
 
 environment:
   sdk: ">=1.19.0 <3.0.0"
@@ -35,10 +35,11 @@ dependencies:
   firebase_core:
   path_provider:
   firebase_auth:
+  advance_pdf_viewer:
   http:
   firebase_storage:
   sqflite:
-  video_player:
+  video_player: ^0.11.0
   pdf_viewer_plugin:
   flutter_full_pdf_viewer:
   flutter_pdfview:
@@ -49,7 +50,6 @@ dependencies:
   epub_view:
   fab_circular_menu:
   url_launcher:
-  advance_pdf_viewer:
   permission_handler:
   flutter_cached_pdfview:
   pdf_flutter:
@@ -73,23 +73,33 @@ dependencies:
   pinput:
   country_code_picker:
   just_audio:
-#  flutter_native_splash:
-#
-#
-#flutter_native_splash:
-#    color: "#55adee"
-#    image: images/launch_image.png
-#    android: true
-#    ios: true
+  flutter_icons: ^1.1.0
+  flutter_launcher_icons:
+
 
 
 dev_dependencies:
   json_serializable:
   flutter_test:
     sdk: flutter
+
 dependency_overrides:
+  platform: ^3.1.0
   analyzer:
   cloud_firestore:
+
+flutter_icons:
+  image_path: "assets/yolast.jpg"
+  image_path_ios: "assets/yolast.jpg"
+  android: true
+  ios: true
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^1.0.0
+
 
 # For information on the geic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -97,7 +107,7 @@ dependency_overrides:
 # The following section is specific to Flutter.
 flutter:
   assets:
-    - android\app\src\main\res\assets\image.xml
+
     - images/calendar.png
     - images/precious.png
     - images/water.JPG

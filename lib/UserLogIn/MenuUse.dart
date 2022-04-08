@@ -39,7 +39,7 @@ class _UserMenuState extends State<UserMenu> {
                     child: Padding(
                   padding: const EdgeInsets.only(bottom: 256.0),
                   child: Text(
-                      'जसले ममाथि विश्वास गर्दछ,पवित्रशास्त्रले भनेअनुसार,उसको हृदयबाट जिउँदो पानीका नदीहरू बहनेछन् ! युहन्ना ७:३८ ',
+                      'जसले ममाथि विश्वास गर्दछ,पवित्रशास्त्रले भनेअनुसार,उसको हृदयबाट जिउँदो पानीका नदीहरू बहनेछन् ! यूहन्ना ७:३८ ',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,

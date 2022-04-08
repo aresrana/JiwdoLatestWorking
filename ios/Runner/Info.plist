@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Jiwdo Pani</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,17 +17,37 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>$(FLUTTER_BUILD_NAME)</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>User are allowed to listen to apple music if needed</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Users require to provide system date or any date to submit or upload data</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Contact allows users to communicate with each other easily</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This feature allows user to track their location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Only use when required</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Users will be allowed to send feedback using voice memo</string>
+	<key>NSMotionUsageDescription</key>
+	<string>User are allowed to choose the display option</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>photo library allows users to have access to the photos they want to upload</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>User are allowed to read the text through speech</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>UIStatusBarHidden</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -41,8 +63,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIStatusBarHidden</key>
-	<true/>
-
 </dict>
 </plist>

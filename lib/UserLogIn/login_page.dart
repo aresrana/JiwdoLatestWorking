@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jiwdopani/selectVerse/selectVerse.dart';
 import '../Admin/adminPage.dart';
+import 'MenuUse.dart';
 import 'reset.dart';
 import '../services/authservice.dart';
 import 'signup.dart';
@@ -11,6 +12,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final AuthService _auth= AuthService();
   final formKey = new GlobalKey<FormState>();
 
   String email, password;
@@ -128,8 +130,11 @@ class _LoginPageState extends State<LoginPage> {
                               decoration: TextDecoration.underline))))),
           SizedBox(height: 40.0),
           GestureDetector(
-            onTap: () {
-              if (checkFields()) AuthService().signIn(email, password, context);
+            onTap: () async {
+              if (checkFields()) await _auth.signIn(email, password, context);
+
+              ;
+
             },
             child: Container(
                 height: 55.0,

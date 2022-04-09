@@ -13,7 +13,9 @@ class AuthService {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (BuildContext context, snapshot) {
           if (snapshot.hasData) {
-            return UserMenu();
+            return
+
+              UserMenu();
           } else
             return LoginPage();
         });
@@ -34,10 +36,11 @@ class AuthService {
 
   //Sign In
   signIn(String email, String password, context) {
-    FirebaseAuth.instance
+     FirebaseAuth.instance
         .signInWithEmailAndPassword(email: email, password: password)
-        .then((val) {
-      UserMenu();
+        .then((val) async {
+
+    await UserMenu();
                           }).catchError((e) {
       ErrorHandler().errorDialog(context, e);
     });

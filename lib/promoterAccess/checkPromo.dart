@@ -49,10 +49,10 @@ class _CheckPromoState extends State<CheckPromo> {
                       dialCodeDigits = country.dialCode;
                     });
                   },
-                  initialSelection: "NPL",
+                  initialSelection: "नेपाल",
                   showCountryOnly: false,
                   showOnlyCountryWhenClosed: false,
-                  favorite: ["+91", "IND", "+1", "USA"],
+                  favorite: ["+91", "IND", "+1", "USA","+977","नेपाल"],
                 ),
               ),
               Container(

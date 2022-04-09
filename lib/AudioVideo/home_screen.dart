@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:jiwdopani/AudioVideo/video.dart';
 import 'package:jiwdopani/AudioVideo/video_screen.dart';
-
+import 'package:jiwdopani/UserLogIn/MenuUse.dart';
+import 'package:get/get.dart';
 import 'api_service.dart';
 import 'channel.dart';
 
@@ -19,7 +22,17 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     _initChannel();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+
+
   }
+
+
+
+
   //UCtfK5Khr3psKzUP9HuYYgrw
   _initChannel() async {
     Channel channel = await APIService.instance
@@ -142,9 +155,20 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor:Colors.indigo[900],
-        title: Text('Jiwdo Pani Audio Video'),
-      ),
+          toolbarHeight: 30,
+          title: Text('Jiwdo Pani Audio Video'),
+          backgroundColor: Colors.indigo[900],
+          automaticallyImplyLeading: false,
+          leading: IconButton(
+              icon: Icon(
+                Icons.arrow_back,
+                color: Colors.black,
+                size: 20,
+              ),
+              onPressed: () => Get.to(UserMenu()))),
+
+
+
       body: _channel != null
           ? NotificationListener<ScrollNotification>(
         onNotification: (ScrollNotification scrollDetails) {

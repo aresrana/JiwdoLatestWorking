@@ -113,10 +113,11 @@ class _UserMenuState extends State<UserMenu> {
                     icon: Icon(Icons.exit_to_app_rounded),
                     onPressed: () async  {
 
+                      await _auth.signOut().then((value) => Navigator.pushReplacement(
+                          context, MaterialPageRoute(builder: (context) => LoginPage())));
 
 
-
-                     _auth.signOut();
+                    //await _auth.signOut();
                       // Navigator.of(context).push(
                       //     MaterialPageRoute(builder: (context) => LoginPage()));
                     },

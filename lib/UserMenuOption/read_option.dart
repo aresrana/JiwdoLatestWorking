@@ -23,7 +23,7 @@ class _ReadOptionState extends State<ReadOption> {
               toolbarHeight: 60,
               backgroundColor: Colors.indigo[900],
               automaticallyImplyLeading: false,
-              title: Text('What do you want to read',
+              title: Text('What do you want to read?',
                   style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
               centerTitle: true,
@@ -76,7 +76,7 @@ class _ReadOptionState extends State<ReadOption> {
                                             height: 25.0,
                                           ),
                                           Text(
-                                            "Jiudo Pani",
+                                            "Jiwdo Pani",
                                             style: TextStyle(
                                               color: Colors.black,
                                               fontWeight: FontWeight.bold,

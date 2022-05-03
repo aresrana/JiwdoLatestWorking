@@ -18,9 +18,11 @@ class Home extends StatelessWidget {
                   // Navigator.pushNamed(
                   //     context, 'ares/${promoters.procontactName}');
                   // },
-                    child:Container(child:Column(children: <Widget>[
+                    child:Container(
+                      width:MediaQuery.of(context).size.width*0.8,
+                      child:Column(children: <Widget>[
                       Container(
-                        width: 100,
+                        width:100,
                         height: 100,
                         decoration: new BoxDecoration(
                             shape: BoxShape.rectangle,

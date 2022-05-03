@@ -49,12 +49,15 @@ class _UserMenuState extends State<UserMenu> {
               ),
               ringColor: Colors.white,
               options: <Widget>[
+                Text('Reading Material'),
                 IconButton(
                     icon: Icon(Icons.book_outlined,semanticLabel:"Read Magazines",),
                     onPressed: () => Navigator.push(context,
                         MaterialPageRoute(builder: (context) => ReadOption())),
                     iconSize: 48.0,
                     color: Colors.indigo),
+
+
                 IconButton(
                     icon: Icon(Icons.add),
                     onPressed: () => Navigator.push(

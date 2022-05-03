@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 
 import 'package:intl/intl.dart';
 
+
 class ReadPromise extends StatefulWidget {
   @override
   _ReadPromiseState createState() => _ReadPromiseState();
 }
 
 class _ReadPromiseState extends State<ReadPromise> {
+
 
   Query _ref;
   DatabaseReference reference =
@@ -45,15 +47,35 @@ class _ReadPromiseState extends State<ReadPromise> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
+
+
       appBar: AppBar(
         backgroundColor: Colors.indigo[900],
         title: Text('Daily Promise दैनिक प्रतिज्ञा', textAlign: TextAlign.center,),
       ),
-      body: SingleChildScrollView(
+
+            body: Container(
+
+      decoration: BoxDecoration(
+      image: DecorationImage(
+      image: AssetImage("assets/promise.jpg"),
+      fit: BoxFit.cover,
+      )),
+        child:SingleChildScrollView(
+
+
       child:Column(
+
       children: <Widget>[
-            Container(
+                    Container(
+                      //padding: EdgeInsets.all(7),
+                      height: MediaQuery.of(context).size.height*0.4,
+                      width: MediaQuery.of(context).size.width*0.8,
+
+                      alignment: Alignment.center,
+
        // height: double.infinity,
         child: FirebaseAnimatedList(
          shrinkWrap: true,
@@ -67,7 +89,13 @@ class _ReadPromiseState extends State<ReadPromise> {
               }),
 
             ),
+    SizedBox(
+      height: MediaQuery.of(context).size.height*0.1,
+    ),
+
     Container(
+
+      width: MediaQuery.of(context).size.width*0.8,
     //height: double.infinity,
     child: FirebaseAnimatedList(
     shrinkWrap: true,
@@ -81,8 +109,15 @@ class _ReadPromiseState extends State<ReadPromise> {
     }),
 
 
-    )
-  ])));
+    ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+        )
+  ])))
+
+
+    );
   }
 
 
@@ -90,17 +125,18 @@ class _ReadPromiseState extends State<ReadPromise> {
           }
 
   Widget _buildContactItem({readPromise,readNepaliPromise}) {
-         return SingleChildScrollView(
-           child: Container(
-
-                       margin: EdgeInsets.symmetric(vertical: 30),
-         // padding: EdgeInsets.all(20),
-          color: Colors.white,
+             return SingleChildScrollView(
+            child: Container(
+                 margin: EdgeInsets.all(10),
+         // // padding: EdgeInsets.all(20),
+          color: Colors.indigo,
 
           child: Container(
-            //padding: EdgeInsets.all(10),
+            height: 200,
+            padding: EdgeInsets.all(5),
+                                 child: Card(
+                                                elevation: 0,
 
-                        child: Card(
 
                   color: Colors.indigo,
                   shadowColor: Colors.black,
@@ -123,7 +159,7 @@ class _ReadPromiseState extends State<ReadPromise> {
                               readPromise['text'], textAlign: TextAlign.center,
                               style: TextStyle(
 
-                                  fontSize: 16,
+                                  fontSize: 17,
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
                             ),
@@ -145,20 +181,20 @@ class _ReadPromiseState extends State<ReadPromise> {
                             child: Text(
                               readPromise['verse'],
                               style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 15,
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
 
                             )
                             ),
                             SizedBox(
-                              width: 100,
+                              width: 70,
                             ),
                             Expanded(
                             child: Text(
                               readPromise['date'],
                               style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 15,
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
                             )),
@@ -181,7 +217,9 @@ class _ReadPromiseState extends State<ReadPromise> {
 
 
 
-           ));
+    //       )
+    )
+             );
 
 
   }
@@ -190,15 +228,19 @@ class _ReadPromiseState extends State<ReadPromise> {
 Widget _buildItem({readNepaliPromise}) {
   return SingleChildScrollView(
       child: Container(
-
-        margin: EdgeInsets.symmetric(vertical: 30),
-        // padding: EdgeInsets.all(20),
-        color: Colors.white,
+      //
+      //   margin: EdgeInsets.symmetric(vertical: 30),
+      padding: EdgeInsets.all(5),
+         color: Colors.indigo,
 
         child: Container(
+          padding: EdgeInsets.all(10),
+          //padding: EdgeInsets.all(20),
           //padding: EdgeInsets.all(10),
+          height: 200,
 
           child: Card(
+            elevation: 0 ,
 
               color: Colors.indigo,
               shadowColor: Colors.black,
@@ -221,7 +263,7 @@ Widget _buildItem({readNepaliPromise}) {
                             readNepaliPromise['promise'], textAlign: TextAlign.center,
                             style: TextStyle(
 
-                                fontSize: 16,
+                                fontSize: 17,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -274,13 +316,13 @@ Widget _buildItem({readNepaliPromise}) {
                             )
                         ),
                         SizedBox(
-                          width: 100,
+                          width: 70,
                         ),
                         Expanded(
                             child: Text(
                               readNepaliPromise['date'],
                               style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 15,
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
                             )),
@@ -298,7 +340,8 @@ Widget _buildItem({readNepaliPromise}) {
 
 
 
-      ));
+    )
+  );
 
 
 }

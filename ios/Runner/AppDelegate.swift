@@ -11,6 +11,13 @@ import Flutter
     UIApplication.shared.isStatusBarHidden = false
 
     GeneratedPluginRegistrant.register(with: self)
+    if #available(iOS 11.0, *) {
+        UNUserNotificationCenter.current().delegate=self as?
+        UNUserNotificationCenterDelegate
+      // Running iOS 11 OR NEWER
+
+      // Earlier version of iOS
+    }
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 }

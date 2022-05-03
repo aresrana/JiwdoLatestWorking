@@ -104,10 +104,12 @@ class _HomeScreenState extends State<HomeScreen> {
           builder: (_) => VideoScreen(id: video.id),
         ),
       ),
-      child: Container(
+      child:
+   Container(
+
         margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
         padding: EdgeInsets.all(10.0),
-        height: 140.0,
+        //height: 140.0,
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -118,7 +120,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        child: Row(
+        child:
+
+        Row(
           children: <Widget>[
             Image(
               width: 150.0,
@@ -180,7 +184,12 @@ class _HomeScreenState extends State<HomeScreen> {
           }
           return false;
         },
-        child: ListView.builder(
+
+
+        child:
+        ListView.builder(
+          shrinkWrap: true,
+          //scrollDirection: Axis.horizontal,
           itemCount: 1 + _channel.videos.length,
           itemBuilder: (BuildContext context, int index) {
             if (index == 0) {
@@ -191,7 +200,7 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         ),
       )
-          : Center(
+      : Center(
         child: CircularProgressIndicator(
           valueColor: AlwaysStoppedAnimation<Color>(
             Theme.of(context).primaryColor, // Red

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:jiwdopani/UserLogIn/MenuUse.dart';
 import 'package:jiwdopani/services/error_handler.dart';
 import 'package:jiwdopani/UserLogIn/login_page.dart';
+import 'package:jiwdopani/Modern menu/screen/MainScreen.dart';
 
 
 class AuthService {
@@ -14,8 +15,8 @@ class AuthService {
         builder: (BuildContext context, snapshot) {
           if (snapshot.hasData) {
             return
-
-              UserMenu();
+             UserMenu();
+             // DashScreen();
           } else
             return LoginPage();
         });
@@ -41,6 +42,7 @@ class AuthService {
         .then((val) async {
 
     await UserMenu();
+    //DashScreen();
                           }).catchError((e) {
       ErrorHandler().errorDialog(context, e);
     });

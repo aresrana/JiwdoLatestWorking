@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:jiwdopani/UserLogIn/MenuUse.dart';
 import 'package:jiwdopani/services/error_handler.dart';
 import 'package:jiwdopani/UserLogIn/login_page.dart';
+import 'package:jiwdopani/itt/home_screen.dart';
 
 
 
@@ -15,7 +16,9 @@ class AuthService {
         builder: (BuildContext context, snapshot) {
           if (snapshot.hasData) {
             return
-             UserMenu();
+              HomeScreen();
+
+             //UserMenu();
              // DashScreen();
           } else
             return LoginPage();

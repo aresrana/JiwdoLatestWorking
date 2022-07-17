@@ -28,6 +28,8 @@ dependencies:
   rxdart:
 
 
+
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons:
@@ -45,10 +47,14 @@ dependencies:
   flutter_pdfview:
   file_picker:
   js:
+  floating_action_bubble:
+  flutter_svg:
+  bottom_navy_bar:
   #cloud_firestore:
   firebase_storage_web:
   epub_view:
   fab_circular_menu:
+
   url_launcher:
   permission_handler:
   flutter_cached_pdfview:
@@ -76,7 +82,11 @@ dependencies:
   flutter_icons: ^1.1.0
   flutter_launcher_icons:
   get:
-  marquee:
+  marquee_widget:
+  animated_text_kit:
+  shared_preferences:
+
+
 
 dev_dependencies:
   json_serializable:
@@ -108,6 +118,7 @@ flutter_icons:
 
 # The following section is specific to Flutter.
 flutter:
+  generate: true
   assets:
 
     - images/calendar.png
@@ -237,6 +248,7 @@ flutter:
     - assets/sat.jpeg
     - assets/lastProLogo.png
 
+    - assets/top_header.png
 
 
 
@@ -269,7 +281,7 @@ flutter:
         - asset: fonts/puree____2.ttf
     - family: Fidd
       fonts:
-       - asset: fonts/Fiddums Family.ttf
+        - asset: fonts/Fiddums Family.ttf
     - family: blk
       fonts:
         - asset: fonts/BLKCHCRY.ttf
@@ -285,7 +297,15 @@ flutter:
         - asset: fonts/Calling Angels Personal Use.ttf
     - family: pure
       fonts:
-      - asset: fonts/puree____2.ttf
+        - asset: fonts/puree____2.ttf
+
+    - family: Montserrat Medium
+      fonts:
+        - asset: fonts/mo_me.ttf
+
+    - family: Montserrat Regular
+      fonts:
+        - asset: fonts/mo_re.ttf
 
 
   # For details regarding fonts from package dependencies,

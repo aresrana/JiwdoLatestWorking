@@ -63,15 +63,24 @@ class _ReadVerseState extends State<ReadVerse> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body : Container(
-        height: MediaQuery.of(context).size.height*0.25,
-        color: Colors.white,
+    return Container(
+        /*decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/promise.jpg"),
+              fit: BoxFit.cover,
+            )),*/
+
+
+        height: MediaQuery.of(context).size.height*0.19,
+       // color: Colors.white,
           alignment: Alignment.center,
 
       child: Column(
 
                     children: <Widget>[
+                      Text(
+                        'Daily Promise'
+                      ),
                       FirebaseAnimatedList(
                         scrollDirection: Axis.vertical,
                             shrinkWrap: true,
@@ -86,9 +95,10 @@ class _ReadVerseState extends State<ReadVerse> {
                             },
 
                       ),
-                       SizedBox(
-                         height: 10,
-                       ),
+                       Text(
+                         'दैनिक प्रतिज्ञा' ,
+                                                ),
+
 
                        FirebaseAnimatedList(
                          scrollDirection: Axis.vertical,
@@ -102,37 +112,43 @@ class _ReadVerseState extends State<ReadVerse> {
                               return _buildItem(readNepaliPromise: readNepaliVerse);
 
                             }),
-                      SizedBox(
-                        height :10
+                     /* SizedBox(
+                        height :5
                       ),
                       Container(
-                        height: MediaQuery.of(context).size.height*0.4,
+                       // height: MediaQuery.of(context).size.height*0.1,
                       child: InkWell(
-                          onTap: () {  Navigator.push(
+                          onTap: () {  Navigator.pop(context);
+                            *//*  .push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomeScreen()));},
+                                  builder: (context) => HomeScreen()));*//*
+
+                              },
                           child: Padding(
                               padding: EdgeInsets.only(top:8.0),
                               child : Column (
                                 children: <Widget> [
                                   Icon(
-                                      Icons.calendar_view_day
+                                      Icons.keyboard_arrow_left,
+                                    size:20
+
+
 
                                   ),
-                                  Text("Read Verse")
+                                  Text("Back")
 
                                 ],
                               )
 
                           )
 
-                      ))
+                      ))*/
 
                     ]
     )
 
-    ));
+    );
   }
 
 
@@ -143,11 +159,8 @@ class _ReadVerseState extends State<ReadVerse> {
 Widget _buildContactItem({readPromise,readNepaliPromise}) {
   return Container(
 
-    padding: EdgeInsets.fromLTRB(5,10,05,10),
-        //color: Colors.indigo,
-        //child: Container(
-          //height: 200
-          child:Column(
+    padding: EdgeInsets.fromLTRB(5,0,05,10),
+               child:Column(
              // mainAxisAlignment: MainAxisAlignment.center,
 
         children: <Widget>[
@@ -160,32 +173,6 @@ Widget _buildContactItem({readPromise,readNepaliPromise}) {
                   speed: Duration(milliseconds: 250))
             ],
           ),
-          // Marquee(
-          //   textDirection: ui.TextDirection.ltr,
-          //     directionMarguee: DirectionMarguee.oneDirection,
-          //     //animationDuration: Duration(seconds:50),
-          //
-          //     child:Text(readPromise['text'])),
-        //Text(
-           //  readPromise['text'],
-         // style: TextStyle(fontSize:16,color: Colors.black),
-                     //),
-
-      //     // ),
-      // AnimatedTextKit(
-      //                   repeatForever: true,
-      //
-      //                   animatedTexts:[
-      //
-      //                     ColorizeAnimatedText(
-      //                       readPromise['verse'],textStyle: colorizeTextStyle,
-      //                       colors:colorizeColors
-      //                     )
-      //                   ]
-      //
-      //
-      //
-      //                 )
           Text(readPromise['verse'],
             style: TextStyle(fontSize:13,color: Colors.red),
 
@@ -205,33 +192,11 @@ Widget _buildItem({readNepaliPromise}) {
               repeatForever: true,
 
               animatedTexts: [
-                TyperAnimatedText(readNepaliPromise['promise'],textAlign:TextAlign.center,textStyle: TextStyle(fontSize: 12),
+                TyperAnimatedText(readNepaliPromise['promise'],textAlign:TextAlign.center,textStyle: TextStyle(fontSize: 12,),
                 speed: Duration(milliseconds: 250))
               ],
             ),
 
-            // AnimatedTextKit(
-            //   repeatForever: true,
-            //
-            //   animatedTexts:[
-            //
-            //     ColorizeAnimatedText(
-            //       readNepaliPromise['verse'],textStyle: colorizeTextStyle,
-            //       colors:colorizeColors
-            //     )
-            //   ]
-            //
-            //
-            //
-            // )
-
-
-            // Text(
-            //   readNepaliPromise['promise'],
-            //   style: TextStyle(fontSize:16,color: Colors.black),
-            //   //),
-            //
-            // // ),
             Text(readNepaliPromise['verse'],
               style: TextStyle(fontSize:13,color: Colors.red),
 

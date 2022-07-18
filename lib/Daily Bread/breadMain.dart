@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jiwdopani/UserMenuOption/read_option.dart';
+import 'package:jiwdopani/itt/home_screen.dart';
 
 import 'englishArchive.dart';
 import 'englishMain.dart';
@@ -38,7 +39,7 @@ class _BreadMainState extends State<BreadMain> {
                   ),
                   onPressed: () =>
                       Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (_) => ReadOption())))),
+                      MaterialPageRoute(builder: (_) => HomeScreen())))),
 
           body: Container(
                         child: SingleChildScrollView(

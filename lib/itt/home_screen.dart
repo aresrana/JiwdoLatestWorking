@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:jiwdopani/Daily%20Bread/breadMain.dart';
 import 'package:jiwdopani/Modern menu/Widget/readVerse.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,38 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
         color: Color.fromRGBO(63, 63, 63, 1));
 
     return Scaffold(
-   /*   appBar: AppBar(
-       flexibleSpace: Container(
-         child: Column(
-             mainAxisAlignment: MainAxisAlignment.center,
-             crossAxisAlignment: CrossAxisAlignment.start,
-           children : <Widget>[
-
-               Text(
-                   'जसले ममाथि विश्वास गर्दछ,पवित्रशास्त्रले भनेअनुसार,उसको हृदयबाट जिउँदो पानीका नदीहरू बहनेछन् ! यूहन्ना ७:३८ ',
-                   textAlign: TextAlign.center,
-                   style: TextStyle(
-                       color: Colors.white,
-                       fontSize: 20.0,
-                       fontWeight: FontWeight.bold)),
-               *//*     Text(
-                              '4101410141',
-                              style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.white,
-                                  fontFamily: "Montserrat Regular"),
-                            )*//*
-
-           ])
-
-
-
-        ),
-
-
-
-      ),*/
-
 
       body: Stack(
         children: <Widget>[
@@ -68,13 +37,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(top:50),
+            padding: EdgeInsets.all(50),
                            child: Text(
                   'जसले ममाथि विश्वास गर्दछ,पवित्रशास्त्रले भनेअनुसार,उसको हृदयबाट जिउँदो पानीका नदीहरू बहनेछन् ! यूहन्ना ७:३८ ',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20.0,
+                      fontSize: 17.0,
                       fontWeight: FontWeight.bold)),
 
     ),
@@ -85,22 +54,9 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: <Widget>[
                   Container(
-                    height: 64,
+                    height: 50,
                     margin: EdgeInsets.only(bottom: 20),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                    /*    CircleAvatar(
-                          radius: 32,
-                          backgroundImage: NetworkImage(
-                              'https://i.pinimg.com/originals/78/07/03/78070395106fcd1c3e66e3b3810568bb.jpg'),
-                        ),*/
-                      /*  SizedBox(
-                          width: 16,
-                        ),*/
-                                       ],
-                    ),
-                  ),
+                             ),
                   Expanded(
                     child: GridView.count(
                       mainAxisSpacing: 10,
@@ -108,7 +64,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       primary: false,
                       crossAxisCount: 2,
                       children: <Widget>[
-                        Card(
+                        GestureDetector(
+                        child:Card(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)),
                           elevation: 4,
@@ -121,6 +78,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               )
                             ],
                           ),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => BreadMain()));
+                        },
                         ),
                         Card(
                           shape: RoundedRectangleBorder(
@@ -207,48 +171,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar:
 
-      buildBottomNavigation(),
-  /*    floatingActionButton: FloatingActionBubble(
-                items: <Bubble>[
-              Bubble(
-                title: "Settings",
-                iconColor: Colors.white,
-                bubbleColor: Colors.blue,
-                icon: Icons.settings,
-                titleStyle: TextStyle(fontSize: 16, color: Colors.white),
-                onPress: () {
-                  _animationController.reverse();
-                },
-              ),
-              Bubble(
-                title: "Profile",
-                iconColor: Colors.white,
-                bubbleColor: Colors.blue,
-                icon: Icons.people,
-                titleStyle: TextStyle(fontSize: 16, color: Colors.white),
-                onPress: () {
-                  _animationController.reverse();
-                },
-              ),
-              Bubble(
-                title: "Home",
-                iconColor: Colors.white,
-                bubbleColor: Colors.blue,
-                icon: Icons.home,
-                titleStyle: TextStyle(fontSize: 16, color: Colors.white),
-                onPress: () {
-                  _animationController.reverse();
-                },
-              ),
-            ],
-            animation: _animation,
-            onPress: () => _animationController.isCompleted
-                ? _animationController.reverse()
-                : _animationController.forward(),
-            backGroundColor: Colors.blue,
-            iconColor: Colors.white,
-            iconData: Icons.menu,
-          )*/
+      ReadVerse(),
+
 
     );
 
@@ -258,13 +182,29 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget buildBottomNavigation() {
     return Container(
 
+
       height: MediaQuery.of(context).size.height*0.1,
       color : Colors.greenAccent,
       child: InkWell(
-        onTap: () {  Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => ReadVerse()));},
+        onTap: () => showModalBottomSheet(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              top: Radius.circular(30)
+            )
+          ),
+
+            isScrollControlled: true,
+
+           context: context, builder: (context) =>ReadVerse()),
+
+
+        //   Navigator.push(
+        //     context,
+        //     MaterialPageRoute(
+        //         builder: (context) => ReadVerse()));
+        //
+        //
+        //   },*/
         child: Padding(
           padding: EdgeInsets.only(top:8.0),
           child : Column (
@@ -273,7 +213,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icons.calendar_view_day
 
               ),
-              Text("Read Verse")
+              Text("Read promise"),
+              Text("प्रतिज्ञा पढ्नुहोस् ")
 
             ],
           )

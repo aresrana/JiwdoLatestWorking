@@ -28,7 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
       body: Stack(
         children: <Widget>[
-          Container(
+
+         Container(
             height: size.height * .3,
             decoration: BoxDecoration(
               image: DecorationImage(
